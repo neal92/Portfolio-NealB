@@ -51,44 +51,49 @@ body, html {
     </div>
 </div>
 
-  <body>
+<br>
+<br>
+<br>
+<br>
 
-    <div class="w3-container w3-light-grey w3-padding-64">
-      <div class="w3-row-padding">
-
-      <h1>Contactez-nous</h1>
-      <p> Pour toute demande, merci de remplir le formulaire ci-dessous. </p>
-      <form method="post">
-        <label>Votre Nom </label>
-        <input type="text" name="Nom" required>
-        <label>Votre Prénom </label>
-        <input type="text" name="Prénom" required>
-        <label>Sujet </label>
-        <input type="text" name="Sujet" required>
-        <label>Votre email</label>
-        <input type="Email" name="Email" required>
+<body>
+      <!-- Contact Section -->
+  <div class="w3-container w3-padding-large w3-light-grey">
+    <h4 id="contact"><b>Contact </b></h4>
+    <p> Voici un formulaire de contact si vous souhaitez obtenir des informations qui ne sont pas présentes sur mon 
+        portfolio. Vous avez aussi la possibilité de me contacter via différents réseau sociaux tel que Instagram / 
+        LinkedIn / GitHub.
+      La liste des procédures peuvent ne plus être à jour / fonctionnel, si vous ne pouvez pas suivre une procédure car 
+      elle est obsolète, ou vous désirez une procédure sur un sujet spécifique ? n’hésitez pas à me contacter je la 
+       mettrais à jour.
+      </p>
+    <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
+      <div class="w3-third w3-dark-grey">
+        <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
+        <p>Nealbristol2002@gmail.com</p>
+      </div>
+      <div class="w3-third w3-teal">
+        <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
+        <p>France</p>
+      </div>
+      </div>
+    <hr class="w3-opacity">
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
         <label>Message</label>
-        <textarea name="Message" placeorder="Message" required></textarea>
-        <input type="submit" value="Envoyer le  message">
-      </form>
-  
-      <?php
-      //Si le formulaire à été soumis
-      if (isset($_POST['message'])) {
-        $message = "Ce message vous à ete envoyer depuis via la page de contact de votre site Portfolio
-        Nom : ". $_POST["Nom"] . "
-        Prénom : ". $_POST["Prénom"] . "
-        Email : ". $_POST["Email"] . "
-        Message : ". $_POST["Message"];
-
-        $retour = mail('nealbristol2002@gmail.com' .$_POST["sujet"],
-        $message, "nealbristol2002@gmail.com" . "\r\n" . "Reply-to" . $_POST["email"]);
-        if($retour)
-            echo '<p>Votre message a bien été envoyé.</p>';
-
-      }
-      ?>
+        <input class="w3-input w3-border" type="text" name="Message" required>
       </div>
-      </div>
+      <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
+    </form>
+  </div>
+
 </body>
 </html>
